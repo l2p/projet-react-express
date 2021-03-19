@@ -4,8 +4,17 @@
   "description": "Test project React & Express",
   "main": "index.js",
   "scripts": {
+    "start": "node ./backend/server.js",
+    "watch": "nodemon ./backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aurélien Vermeulen",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
