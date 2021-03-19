@@ -1,8 +1,10 @@
 const express = require('express');
-var Datastore = require('nedb')
-    ,db = new Datastore();
+const cors = require('cors');
+const Datastore = require('nedb');
+db = new Datastore();
 
 const PORT = 5000;
+
 
 // BDD
 db = {};
@@ -14,6 +16,8 @@ db.users.loadDatabase();
 
 // Start Express
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
