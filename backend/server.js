@@ -57,6 +57,13 @@ app.delete('/api/post/:id', (req, res) => {
     db.posts.remove({_id: req.params.id});
 });
 
+// API CRUD COMMENTS
+// Add comments
+app.patch('/api/post/:id', (req, res) => {
+    db.posts.update({_id: req.params.id}, {$set: {...req.body} });
+    res.send(req.body);
+});
+
 // API CRUD USERS
 // Create user
 app.post('/api/user', (req, res) => {
